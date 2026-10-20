@@ -932,18 +932,6 @@
         text.appendChild(facts);
       }
 
-      var actions = h('div', 'owner-actions');
-      var msg = h('a', 'btn solid', '');
-      msg.href = '#contact';
-      actions.appendChild(msg);
-      if (OWNER.phone) {
-        var call = h('a', 'btn', '');
-        call.href = 'tel:' + OWNER.phone;
-        call.target = '_top';
-        actions.appendChild(call);
-      }
-      text.appendChild(actions);
-
       var links = h('div', 'owner-links');
       (OWNER.links || []).forEach(function (l) {
         var u = safeUrl(l.url);
