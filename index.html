@@ -873,7 +873,7 @@
   var MUSIC_URL  = 'https://raw.githubusercontent.com/Umniv/SCHOOL-BUSINESS-HTML/blob/main/troktrik.mp3';
   var MUSIC_TITLE = 'Now Playing';   // text shown next to the button
   var MUSIC_VOLUME = 1;           // 0 (silent) to 1 (full)
-  var PLAY_ON_FIRST_TAP = false;      // true = starts on the visitor's first click/tap (browsers block sound before that). false = only the button plays it.
+  var PLAY_ON_FIRST_TAP = true;      // true = starts on the visitor's first click/tap (browsers block sound before that). false = only the button plays it.
 
   (function () {
     /* ------------------------- OWNER ------------------------- */
@@ -933,11 +933,11 @@
       }
 
       var actions = h('div', 'owner-actions');
-      var msg = h('a', 'btn solid', 'Message Me');
+      var msg = h('a', 'btn solid', '');
       msg.href = '#contact';
       actions.appendChild(msg);
       if (OWNER.phone) {
-        var call = h('a', 'btn', 'Call Me');
+        var call = h('a', 'btn', '');
         call.href = 'tel:' + OWNER.phone;
         call.target = '_top';
         actions.appendChild(call);
